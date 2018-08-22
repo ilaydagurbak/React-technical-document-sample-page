@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical document page for ReactJS</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<nav id="navbar">
+  <header >React Documentation - Main Concepts</header>
+  <ul> 
+    <a class="nav-link" href="#Hello_world" rel="internal"><li>Hello World</li></a>
+    <a class="nav-link" href="#Introducing_JSX" rel="internal"><li>Introducing JSX</li></a>
+    <a class="nav-link" href="#Rendering_elements" rel="internal"><li>Rendering Elements</li></a>
+    <a class="nav-link" href="#Components_and_props" rel="internal"><li>Components and Props</li></a>
+    <a class="nav-link" href="#State_and_lifecycle" rel="internal"><li>State and Lifecycle</li></a>
+    <a class="nav-link" href="#Declaring_variables" rel="internal"><li>Declaring variables</li></a>
+    <a class="nav-link" href="#Handling_events" rel="internal"><li>Handling Events</li></a>
+    <a class="nav-link" href="#Conditional_rendering" rel="internal"><li>Conditional Rendering</li></a>
+    <a class="nav-link" href="#Lists_and_keys" rel="internal"><li>Lists and Keys</li></a>
+    <a class="nav-link" href="#Forms" rel="internal"><li>Forms</li></a>
+    <a class="nav-link" href="#Lifting_state_up" rel="internal"><li>Lifting State Up</li></a>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Hello_world">
+    <header>Hello World</header>
+    <article>  
+      <p>The smallest React example looks like this:
+      <code> Lorem ipsum
+        </code> 
+      It displays a heading saying “Hello, world!” on the page.</p>
+      </artice>
+    </section>
+  <section class="main-section" id="Introducing_JSX">
+    <header>Introducing JSX</header>
+    <article>
+      <p>Consider this variable declaration:</p>
+      <code>Lorem ipsum</code>
+      <li>This funny tag syntax is neither a string nor HTML.
+
+It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+
+JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.</li>
+      <p>Why JSX?</p>
+      <li>React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.
+
+Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.
+
+React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.
+
+With that out of the way, let’s get started!</li>
+      </artice>
+    </section>
+  <section class="main-section" id="Rendering_elements">
+    <header>Rendering Elements</header>
+    <article>
+    <p>An element describes what you want to see on the screen:</p>
+     <code>Lorem ipsum</code>
+
+<p>Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Component_and_props">
+    <header>Component and Props</header>
+    <article> 
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.
+<code>Lorem ipsum
+</code>
+This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “functional” because they are literally JavaScript functions.
+    </article>
+    </section>
+  <section class="main-section" id="State_and_lifecycle">
+    <header>State and Lifecycle</header>
+    <code>Lorem ipsum</code>
+    <p>
+ In this section, we will learn how to make the Clock component truly reusable and encapsulated. It will set up its own timer and update itself every second.
+    </p>
+    </section>
+  <section class="main-section" id="Handling_events">
+    <header>Handling Events</header>
+    <article>
+React events are named using camelCase, rather than lowercase.
+With JSX you pass a function as the event handler, rather than a string.
+For example, the HTML:
+      <p>
+     Another difference is that you cannot return false to prevent default behavior in React. You must call preventDefault explicitly. For example, with plain HTML, to prevent the default link behavior of opening a new page, you can write:
+      </p>
+      </p>
+    </article>
+    </section>
+  <section class="main-section" id="Conditional_rendering">
+    <header>Conditional Rendering</header>
+    <article>
+     <p> Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Lists_and_keys">
+    <header>Lists and Keys</header>
+    <article>
+<p>Given the code below, we use the map() function to take an array of numbers and double their values. We assign the new array returned by map() to the variable doubled and log it:</p>
+      <code>Lorem ipsum</code>
+<p>This code logs [2, 4, 6, 8, 10] to the console.
+
+In React, transforming arrays into lists of elements is nearly identical.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Forms">
+    <header>Forms</header>
+    <article>
+<p>HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:</p>
+
+      <code>Lorem ipsum</code>
+<p>This form has the default HTML form behavior of browsing to a new page when the user submits the form. If you want this behavior in React, it just works. But in most cases, it’s convenient to have a JavaScript function that handles the submission of the form and has access to the data that the user entered into the form. The standard way to achieve this is with a technique called “controlled components”.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Lifting_states_up">
+    <header>Lifting States Up</header>
+    <article>
+      <p>Often, several components need to reflect the same changing data. We recommend lifting the shared state up to their closest common ancestor. Let’s see how this works in action.
+
+In this section, we will create a temperature calculator that calculates whether the water would boil at a given temperature.
+
+We will start with a component called BoilingVerdict. It accepts the celsius temperature as a prop, and prints whether it is enough to boil the water:</p>
+      <code>Lorem ipsum</code>
+    </article>
+    </section>
+</main>
+  
+  
+
+</body>
+
+</html>
